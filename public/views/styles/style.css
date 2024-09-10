@@ -94,10 +94,9 @@ video {
 
     .video-container {
         position: absolute;
+        top: 5%;
         overflow: hidden;
         border-radius: 0;
-        top: 50%;
-        transform: translateY(-80%);
     }
 
     video {
