@@ -57,6 +57,7 @@ video {
     background-color: #fff;
     transform: rotateZ(-45deg);
     cursor: pointer;
+    z-index: 1000;
 }
 
 .close-video::before {

@@ -41,6 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/rubim/WebstormProjects/roulet/tema-15$/public/views/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -52,6 +53,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public" />
       <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\images" />
@@ -80,7 +84,7 @@
       <updated>1725829419784</updated>
       <workItem from="1725829420883" duration="22781000" />
       <workItem from="1725914491000" duration="7334000" />
-      <workItem from="1725922489269" duration="2420000" />
+      <workItem from="1725922489269" duration="4469000" />
     </task>
     <servers />
   </component>
