@@ -4,7 +4,87 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba97c605-a01a-4c54-84c8-29e9d2a1c7dd" name="Changes" comment="" />
+    <list default="true" id="ba97c605-a01a-4c54-84c8-29e9d2a1c7dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/android-icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/android-icon-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/android-icon-36x36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/android-icon-48x48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/android-icon-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/android-icon-96x96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-114x114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-120x120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-152x152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-180x180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-76x76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon-precomposed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/apple-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/favicon-96x96.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/ms-icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/ms-icon-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/ms-icon-310x310.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/favicon/ms-icon-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-BlackItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-BoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-ExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-ExtraBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-ExtraLight.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-ExtraLightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-Italic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-LightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-MediumItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-SemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-SemiBoldItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-Thin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/font/Inter_18pt-ThinItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/images/auth-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/images/icons/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/images/icons/lock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/partials/page/panel.admin.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/scripts/admin.login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/styles/admin.login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/styles/admin.panel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/views/styles/font.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/adminRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sendEmail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/logger.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/db/connect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/admin.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/admin.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/1win.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/Frame 1948758059 (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/lock.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/images/pho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/layouts/admin.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/layouts/admin.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/layouts/main.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/layouts/main.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/scripts/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/adminModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/styles/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/partials/page/auth.admin.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/mainRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/mainRouter.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +121,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/rubim/WebstormProjects/roulet/tema-15$/public/views/images",
+    "last_opened_file_path": "C:/Users/rubim/WebstormProjects/roulet/tema-15$/public/views/images/icons",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,14 +134,17 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\images\icons" />
+      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\styles" />
+      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public" />
       <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views" />
+      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\pages\admin" />
       <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public" />
       <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\images" />
       <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\scripts" />
-      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views\styles" />
-      <recent name="C:\Users\rubim\WebstormProjects\roulet\tema-15$\public\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -84,7 +167,9 @@
       <updated>1725829419784</updated>
       <workItem from="1725829420883" duration="22781000" />
       <workItem from="1725914491000" duration="7334000" />
-      <workItem from="1725922489269" duration="7522000" />
+      <workItem from="1725922489269" duration="8200000" />
+      <workItem from="1725985462020" duration="2893000" />
+      <workItem from="1725998172980" duration="26419000" />
     </task>
     <servers />
   </component>

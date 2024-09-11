@@ -1,18 +1,18 @@
 const { Router } = require('express')
-const bcrypt = require('bcrypt')
 const router = new Router()
+const bcrypt = require('bcrypt')
 
 const videoModel = require('../models/videoModel')
 
 router.get('/', (req, res) => {
 	res.redirect('https://1wbhk.com/casino/list?open=register&p=ilnd')
 })
-router.get('/admin', (req, res) => {
-	res.render('admin')
-})
+
 router.get('/:slink', async (req, res) => {
 	const isSLink = await videoModel.findOne({ slink: req.params.slink })
-	if (isSLink) return res.render('password', { slink: req.params.slink })
+	if (isSLink) {
+		return res.render('password', {slink: req.params.slink})
+	}
 
 	const isUuid = await videoModel.findOne({ uuid: req.params.slink })
 	if (isUuid) return res.render('home', { uuid: isUuid.uuid, vlink: isUuid.vlink })

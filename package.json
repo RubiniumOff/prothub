@@ -6,8 +6,12 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.1",
-    "path": "^0.12.7"
+    "nodemailer": "^6.9.15",
+    "path": "^0.12.7",
+    "remove": "^0.1.5"
   },
   "name": "tema",
   "version": "1.0.0",

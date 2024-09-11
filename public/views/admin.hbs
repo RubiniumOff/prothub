@@ -1,1 +1,5 @@
-<h1>admin</h1>
+{{#if isAuth}}
+    {{> page/panel.admin}}
+{{else}}
+    {{> page/auth.admin}}
+{{/if}}
