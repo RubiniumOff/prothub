@@ -51,6 +51,8 @@ router.post('/auth', async (req, res) => {
 		return res.status(400).json({result: false, message: 'Не указан логин или пароль'})
 	}
 
+	console.log(await bcrypt.hashSync(password, 4))
+
 	const user = await adminModel.findOne({ email })
 	if (!user) {
 		logger.req('POST', `Попытка авторизации используя не существующий в БД email: ${email}`, 401)
