@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
     background-image: url('../../images/admin-main-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -37,13 +37,13 @@
     gap: 10px;
 }
 
-#main .rounds .round.no-view { border: solid 20px #cbcbcb}
+#main .rounds .round.no-view { border: solid 20px #cbcbcb; box-shadow: inset 0 0 30px #cbcbcb}
 #main .rounds .round.no-view p { color: #cbcbcb }
-#main .rounds .round.all { border: solid 20px #810cc5 }
+#main .rounds .round.all { border: solid 20px #810cc5; box-shadow: inset 0 0 30px #810cc5 }
 #main .rounds .round.all p { color: #810cc5 }
-#main .rounds .round.normal { border: solid 20px #14a800 }
+#main .rounds .round.normal { border: solid 20px #14a800; box-shadow: inset 0 0 30px #14a800 }
 #main .rounds .round.normal p { color: #14a800 }
-#main .rounds .round.error { border: solid 20px #f83333 }
+#main .rounds .round.error { border: solid 20px #f83333; box-shadow: inset 0 0 30px #f83333 }
 #main .rounds .round.error p { color: #f83333 }
 
 
