@@ -37,8 +37,9 @@ app.use(session({
 
 app.use((req, res, next) => {
 	const { method, url } = req
-	const ip = req.headers['X-Real-IP'] || null
+	const ip = req.headers['x-real-ip'] || null
 	const host = req.get('host')
+	console.log(req.headers)
 	logger.req(method, `ULR: ${host}${url} | IP: ${ip}`)
 	next()
 })
