@@ -37,7 +37,7 @@ app.use(session({
 
 app.use((req, res, next) => {
 	const { method, url } = req
-	const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+	const ip = req.headers['x-real-ip'] || null
 	const host = req.get('host')
 	logger.req(method, `ULR: ${host}${url} | IP: ${ip}`)
 	next()
