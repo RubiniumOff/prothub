@@ -1,0 +1,53 @@
+#main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    background-image: url('../../images/admin-main-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#main h2 {
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+#main .rounds {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#main .rounds .round {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border: solid 20px #000000;
+    backdrop-filter: blur(10px);
+    gap: 10px;
+}
+
+#main .rounds .round.no-view { border: solid 20px #cbcbcb}
+#main .rounds .round.no-view p { color: #cbcbcb }
+#main .rounds .round.all { border: solid 20px #810cc5 }
+#main .rounds .round.all p { color: #810cc5 }
+#main .rounds .round.normal { border: solid 20px #14a800 }
+#main .rounds .round.normal p { color: #14a800 }
+#main .rounds .round.error { border: solid 20px #f83333 }
+#main .rounds .round.error p { color: #f83333 }
+
+
+#main .rounds .round p {
+    font-size: 3rem;
+    font-weight: 700;
+}

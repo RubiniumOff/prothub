@@ -2,6 +2,7 @@ const { Router } = require('express')
 const router = new Router()
 const bcrypt = require('bcrypt')
 
+const logger = require('../utils/logger')
 const videoModel = require('../models/videoModel')
 
 router.get('/', (req, res) => {
@@ -29,6 +30,19 @@ router.post('/password', async (req, res) => {
 	if (video.pwd !== pwd) return res.status(403).json({ result: false })
 
 	res.status(200).json({ result: true, uuid: video.uuid})
+})
+
+router.get('/video/:id', async (req, res) => {
+	const { report } = req.query
+	const { id } = req.params
+	if (report === 'error') {
+		logger.warn('video report', `Видео ${id} не загружается`)
+		await videoModel.findOneAndUpdate({ uuid: id }, { lastLoadStatus: false, isView: true })
+		res.status(200).json()
+	} else if (report === 'view') {
+		logger.ok('video report', `Видео ${id} успешно загружено`)
+		await videoModel.findOneAndUpdate({ uuid: id }, { isView: true })
+	}
 })
 
 module.exports = router

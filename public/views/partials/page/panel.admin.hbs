@@ -1,5 +1,40 @@
+<link rel="stylesheet" href="./views/styles/admin.panel.css">
 <div id="dashboard">
     <header>
-        <img src="../../images/ph.png" alt="Logotype">
+        <div class="logotype">
+            <img src="./views/images/ph.png" alt="Logotype">
+            <p>Dashboard</p>
+        </div>
+        <div class="profile">
+            <p>Привет, <br>{{username}}</p>
+            <img src="{{ avatar }}" alt="User avatar">
+        </div>
     </header>
+    <aside>
+        <div class="navigation">
+            <a href="/">
+                <img src="./views/images/icons/dashboard-main.svg" alt="">
+                Главная
+            </a>
+            <a href="/videos">
+                <img src="./views/images/icons/dashboard-video.svg" alt="">
+                Видео
+            </a>
+            <a href="/admins">
+                <img src="./views/images/icons/dashboard-admin.svg" alt="">
+                Администраторы
+            </a>
+        </div>
+        <div class="bottom">
+            <a href="/logout">
+                <img src="./views/images/icons/dashboard-logout.svg" alt="">
+                Выйти
+            </a>
+            <p>Проект разработан <a href="https://t.me/i_rubinium" class="tg-link"> @i_rubinium </a> в 2024г.</p>
+        </div>
+    </aside>
+    <main>
+        {{> (window) }}
+    </main>
+    <footer></footer>
 </div>

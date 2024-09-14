@@ -4,6 +4,7 @@ const path = require('path')
 const { engine } = require('express-handlebars')
 const session = require('express-session')
 const cookieParser = require('cookie-parser')
+const cors = require('cors')
 const app = express()
 
 const logger = require('./utils/logger')
@@ -16,10 +17,14 @@ app.set('view engine', '.hbs')
 app.set('views', path.resolve(__dirname, 'public', 'views'))
 // app.enable('view cache');
 
-app.use(express.static(path.resolve(__dirname, 'public', 'views')))
+app.use(cors())
+
+app.use('/avatars', express.static(path.resolve(__dirname, 'public', 'avatars')))
+app.use('/views', express.static(path.resolve(__dirname, 'public', 'views')))
+
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json({}))
-app.use(cookieParser())
+app.use(cookieParser(process.env.SECRET_KEY))
 app.use(session({
 	secret: process.env.SECRET_KEY,
 	resave: false,
@@ -32,9 +37,9 @@ app.use(session({
 
 app.use((req, res, next) => {
 	const { method, url } = req
-	const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
+	// const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
 	const host = req.get('host')
-	logger.req(method, `ULR: ${host}${url} | IP: ${ip}`)
+	logger.req(method, `ULR: ${host}${url} | IP: ${req.ip}`)
 	next()
 })
 app.use((req, res, next) => {

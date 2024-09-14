@@ -4,6 +4,7 @@ const Admin = new Schema({
 	email: String,
 	username: String,
 	secret: String,
+	avatar: String,
 	ip: {
 		type: [String],
 		default: []

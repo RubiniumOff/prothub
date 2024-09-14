@@ -1,0 +1,126 @@
+:root {
+    --background-color-100: #f1faff;
+    --background-color-700: #1f2c3d;
+    --background-color-800: #071018;
+    --accent-subcolor: #1d719d;
+    --accent-color: #00A3FF;
+    --link-color: #009fe3;
+}
+
+body {
+    background-color: var(--background-color-100);
+    height: 100vh;
+    width: 100vw;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'navigation window'
+    ;
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 300px 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    grid-area: header;
+    width: 100vw;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color-800);
+}
+
+header .logotype {
+    position: relative;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logotype p {
+    color: #ffffff;
+    letter-spacing: 0.7rem;
+}
+
+header .logotype img {
+    width: 100%;
+}
+
+header .profile {
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+header .profile p {
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+}
+
+header .profile img {
+    height: 60px;
+}
+
+aside {
+    border-top: solid 2px #1f2c3d;
+    grid-area: navigation;
+    background-color: var(--background-color-800);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside a:not(a.tg-link) {
+    padding: 0 30px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    place-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+aside a:hover,
+aside a.active {
+    background-color: var(--background-color-700);
+}
+
+aside a img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+aside .bottom p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: #1c1c1c;*/
+    height: 50px;
+    font-size: 0.8rem;
+    color: #9a9a9a;
+}
+
+aside .bottom p a {
+    color: #3d7286;
+    padding: 0 5px;
+}
+
+main {
+    position: relative;
+    grid-area: window;
+}

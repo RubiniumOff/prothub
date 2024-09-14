@@ -51,6 +51,11 @@
     background-color: #fff;
 }
 
+#password form .form-container.error .input-container { animation: formErrorAnimation 0.8s forwards; }
+#password form .form-container.error .input-container input:not(input[type="checkbox"]) {
+    border: solid 2px #e32636;
+}
+
 #password form .form-container .input-container {
     display: flex;
     justify-content: center;
@@ -150,4 +155,12 @@
     text-align: center;
     text-decoration: none;
     color: #147db0;
+}
+
+@keyframes formErrorAnimation {
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(10px);}
+    50% {transform: translateX(-10px);}
+    75% {transform: translateX(10px);}
+    100% {transform: translateX(0);}
 }

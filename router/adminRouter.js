@@ -3,10 +3,11 @@ const router = new Router()
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 
+const videoModel = require('../models/videoModel')
 const adminModel = require('../models/adminModel')
 const logger = require('../utils/logger')
 
-router.get('/', async (req, res) => {
+router.use(async (req, res, next) => {
 	const { token } = req.cookies
 
 	if (!token) {
@@ -16,30 +17,81 @@ router.get('/', async (req, res) => {
 
 	try {
 		const tokenData = await jwt.verify(token, process.env.SECRET_KEY)
-		if (!tokenData) {
+		if (!tokenData?.id) {
 			logger.req('GET', 'Токен истек или невалиден')
 			return res.render('admin', { isAuth: false, layout: 'admin' })
 		}
 
-		const sign = await jwt.sign({
-			exp: Math.floor(Date.now() / 1000) + (7 * 24 * 60 * 60),
-			data: {tokenData}
-		}, process.env.SECRET_KEY)
+		const sign = await jwt.sign(
+			{
+				id: tokenData.id,
+				username: tokenData.username,
+				avatar: tokenData.avatar
+			},
+			process.env.SECRET_KEY,
+			{ expiresIn: '7d' }
+		)
 
 		logger.req('GET', 'Создан новый токен')
 
-		res.cookie('token', sign, {maxAge: 7 * 24 * 60 * 60})
-		res.render('admin', {
-			isAuth: true,
-			username: tokenData.username,
-			layout: 'admin'
-		})
+		res.cookie('token', sign, {maxAge: 7 * 24 * 60 * 60, httpOnly: true})
 
 		logger.req('POST', 'Администратор прошел без авторизации')
+
+		res.locals.tokenData = tokenData
+
+		return next();
 	} catch (e) {
-		logger.req('GET', 'Токен истек или невалиден')
+		logger.req('GET', 'Catch. Токен истек или невалиден')
 		return res.render('admin', { isAuth: false, layout: 'admin' })
 	}
+})
+
+router.get('/', async (req, res) => {
+	const {username, avatar} = res.locals.tokenData
+
+	const allVideoCount = await videoModel.find({}).countDocuments()
+	const errorVideoCount = await videoModel.find({lastLoadStatus: false, isView: true}).countDocuments()
+	const normalVideoCount = await videoModel.find({lastLoadStatus: true, isView: true}).countDocuments()
+	const noViewVideoCount = await videoModel.find({isView: false}).countDocuments()
+
+	res.render('admin', {
+		isAuth: true,
+		username: username,
+		avatar: `http://${req.get('host')}/avatars/${avatar}.svg`,
+		layout: 'admin',
+		window: () => 'page/admin/main',
+		videoStats: {
+			all: allVideoCount,
+			error: errorVideoCount,
+			normal: normalVideoCount,
+			noView: noViewVideoCount
+		}
+	})
+})
+
+router.get('/videos', (req, res) => {
+	const {username, avatar} = res.locals.tokenData
+
+	res.render('admin', {
+		isAuth: true,
+		username: username,
+		avatar: `http://${req.get('host')}/avatars/${avatar}.svg`,
+		layout: 'admin',
+		window: () => 'page/admin/videos'
+	})
+})
+
+router.get('/admins', (req, res) => {
+	const {username, avatar} = res.locals.tokenData
+
+	res.render('admin', {
+		isAuth: true,
+		username: username,
+		avatar: `http://${req.get('host')}/avatars/${avatar}.svg`,
+		layout: 'admin',
+		window: () => 'page/admin/admins'
+	})
 })
 
 router.post('/auth', async (req, res) => {
@@ -50,8 +102,6 @@ router.post('/auth', async (req, res) => {
 		logger.req('POST', 'Не пришла информация о логине или пароле', 400)
 		return res.status(400).json({result: false, message: 'Не указан логин или пароль'})
 	}
-
-	console.log(await bcrypt.hashSync(password, 4))
 
 	const user = await adminModel.findOne({ email })
 	if (!user) {
@@ -69,7 +119,8 @@ router.post('/auth', async (req, res) => {
 
 	const token = await jwt.sign({
 		id: user.id,
-		username: user.username
+		username: user.username,
+		avatar: user.avatar
 	}, process.env.SECRET_KEY, {
 		expiresIn: '7d'
 	})
@@ -77,8 +128,7 @@ router.post('/auth', async (req, res) => {
 	await user.updateOne({ $push: { authenticateLogs: { ts: Date.now(), ip } } })
 	await user.updateOne({ $push: { ip }})
 
-	res.cookie('token', token)
-	res.cookie('username', user.username)
+	res.cookie('token', token, {maxAge: 7 * 24 * 60 * 60, httpOnly: true})
 
 	logger.req('POST', `Авторизация успешна. Куки и токен созданы. Email: ${email}`, 200)
 

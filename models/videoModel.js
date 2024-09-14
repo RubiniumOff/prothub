@@ -5,6 +5,14 @@ const Video = new Schema({
 	vlink: String,
 	slink: String,
 	pwd: String,
+	lastLoadStatus: {
+		type: Boolean,
+		default: true
+	},
+	isView: {
+		type: Boolean,
+		default: false
+	}
 })
 
 module.exports = model('video', Video)

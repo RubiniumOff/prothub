@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="./views/styles/admin/main.css">
+
+<div id="main">
+    <h2>Статистика по видео</h2>
+    <div class="rounds">
+        <div class="round all">
+            <h3>Всего видео</h3>
+            <p>{{ videoStats.all }}</p>
+        </div>
+        <div class="round no-view">
+            <h3>Не просмотрено</h3>
+            <p>{{ videoStats.noView }}</p>
+        </div>
+        <div class="round normal">
+            <h3>Рабочих</h3>
+            <p>{{ videoStats.normal }}</p>
+        </div>
+        <div class="round error">
+            <h3>С ошибкой</h3>
+            <p>{{ videoStats.error }}</p>
+        </div>
+    </div>
+</div>

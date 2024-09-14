@@ -1,3 +1,5 @@
+import toaster from './toaster.mjs'
+
 const loginEmailInput = document.querySelector('#passwordForm .login-input input');
 const loginPassInput = document.querySelector('#passwordForm .password-input input');
 const passwordForm = document.querySelector('#passwordForm');
@@ -45,6 +47,18 @@ passwordForm.addEventListener('submit', async (e) => {
 	const json = await resp.json()
 
 	if (json.result) return window.location.reload()
+	else {
+		noAccessAnimation()
+		toaster.error(json.message)
+	}
 
 	return false;
 })
+
+function noAccessAnimation() {
+	const form_container = passwordForm.querySelector('.form-container');
+	form_container.classList.add('error')
+	setTimeout(() => {
+		form_container.classList.remove('error')
+	}, 1000)
+}
