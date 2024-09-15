@@ -17,6 +17,8 @@ app.set('view engine', '.hbs')
 app.set('views', path.resolve(__dirname, 'public', 'views'))
 // app.enable('view cache');
 
+app.set('trust proxy', true)
+
 app.use(cors())
 
 app.use('/avatars', express.static(path.resolve(__dirname, 'public', 'avatars')))
@@ -37,9 +39,8 @@ app.use(session({
 
 app.use((req, res, next) => {
 	const { method, url } = req
-	const ip = req.headers['x-real-ip'] || null
+	const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress
 	const host = req.get('host')
-	console.log(req.headers)
 	logger.req(method, `ULR: ${host}${url} | IP: ${ip}`)
 	next()
 })
